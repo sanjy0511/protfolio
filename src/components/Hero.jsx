@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-scroll";
+import MernPdf from "../assets/Mern_stack.pdf";
 
 const Hero = () => {
   return (
@@ -70,8 +71,8 @@ const Hero = () => {
           View My Work
         </Link>
         <a
-          href="#"
-          download
+          href={MernPdf}
+          download="Mern_stack.pdf"
           className="px-6 py-3 rounded-xl border border-purple-500 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white transition-all"
         >
           Download CV

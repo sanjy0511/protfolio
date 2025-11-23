@@ -1,6 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import {Link} from "react-router-dom"
 
 
 const projects = [
@@ -21,6 +21,12 @@ const projects = [
     desc: " created a login and registration using the expressjs with proper validation using Joi. OTP verification via email, file upload with resize using Sharp package, and logging with Winston. multiple authentication, normal login, Google login, LinkedIn login, and Facebook login.",
     color: "orange",
     link: "https://github.com/flipflopbackend/flip_flop.git",
+  },
+    {
+    title: "Xoxo Game",
+    desc: " This XOXO game is a simple and fun two-player Tic-Tac-Toe built using React and Tailwind CSS.Players take turns placing X and O on a 3×3 grid to form a winning line.The game includes a scoreboard that tracks X wins, O wins, and draws.It also highlights the winning line to make the victory clear and interactive.",
+    color: "yellow",
+    link: "/xoxo",
   },
 ];
 
@@ -61,20 +67,21 @@ const Projects = () => {
               ${p.color === "purple" ? "bg-purple-500" : ""}
               ${p.color === "blue" ? "bg-blue-500" : ""}
               ${p.color === "orange" ? "bg-orange-500" : ""}
+              ${p.color === "yellow" ? "bg-yellow-500" : ""}
               `}
             ></div>
             <h2 className="text-2xl font-bold dark:text-white">{p.title}</h2>
             <p className="mt-3 text-sm text-gray-700 dark:text-gray-300 opacity-90">
               {p.desc}
             </p>
-            <a
-              href={p.link}
+            <Link
+              to={p.link}
               className="flex items-center gap-2 mt-5 underline text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-300 transition-all"
               target="_blank"
             >
               <FaGithub size={20} />
               Github
-            </a>
+            </Link>
           </motion.div>
         ))}
       </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   return (
     <nav className="fixed top-0 left-0 w-full backdrop-blur bg-white/50 dark:bg-gray-900/50 shadow z-50">
-      <div className="max-w-7xl max-auto px-6 py-4 flex justify-between items-center">
+      <div className="w-full max-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-3xl font-bold dark:text-white tracking-wide">
           Portfolio
         </h1>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 import {Link} from "react-router-dom"
 
 
@@ -7,26 +7,32 @@ const projects = [
   {
     title: "Mini E-Commerce Backend",
     desc: "This project is a mini e-commerce backend system built with clean REST APIs, MongoDB & SQL database, and role-based authentication. It supports essential online shopping features like user management, cart handling, order processing, and customer-admin chat.",
-    color: "purple",
+    color: "orange",
     link: "https://github.com/flipflopbackend/ecommerce.git",
   },
   {
     title: "Whatsapp Clone Backend",
     desc: "WhatsApp-like project featuring user login via phone number OTP using Twilio, SQL database, Socket.IO for real-time messaging, personal and group chats, add/remove contacts and block/unblock numbers, integrates Kafka to manage message processing.",
-    color: "blue",
+    color: "green",
     link: "https://github.com/sanjy0511/backend-whatsapp.git",
   },
   {
     title: "Login and Register",
     desc: " created a login and registration using the expressjs with proper validation using Joi. OTP verification via email, file upload with resize using Sharp package, and logging with Winston. multiple authentication, normal login, Google login, LinkedIn login, and Facebook login.",
-    color: "orange",
+    color: "red",
     link: "https://github.com/flipflopbackend/flip_flop.git",
   },
     {
     title: "Xoxo Game",
-    desc: " This XOXO game is a simple and fun two-player Tic-Tac-Toe built using React and Tailwind CSS.Players take turns placing X and O on a 3×3 grid to form a winning line.The game includes a scoreboard that tracks X wins, O wins, and draws.It also highlights the winning line to make the victory clear and interactive.",
+    desc: "This XOXO game is a simple and fun two-player Tic-Tac-Toe built using React and Tailwind CSS. Players take turns placing X and O on a 3×3 grid to form a winning line.The game includes a scoreboard that tracks X wins, O wins, and draws.It also highlights the winning line to make the victory clear and interactive.",
     color: "yellow",
     link: "/xoxo",
+  },
+    {
+    title: "Tic Tac Toe",
+    desc: "An interactive Stone–Paper–Pencil–Scissor game built using React.js and Tailwind CSS, featuring a dynamic player-vs-computer gameplay system. It includes glowing neon visuals, animated buttons, and a real-time scoreboard that tracks wins, losses, and draws.This designed with an attractive gradient theme",
+    color: "teal",
+    link: "/stone-game",
   },
 ];
 
@@ -64,10 +70,11 @@ const Projects = () => {
           >
             <div
               className={`h-2 rounded-full mb-4 
-              ${p.color === "purple" ? "bg-purple-500" : ""}
-              ${p.color === "blue" ? "bg-blue-500" : ""}
               ${p.color === "orange" ? "bg-orange-500" : ""}
+              ${p.color === "green" ? "bg-green-500" : ""}
+              ${p.color === "red" ? "bg-red-500" : ""}
               ${p.color === "yellow" ? "bg-yellow-500" : ""}
+              ${p.color === "teal" ? "bg-teal-500" : ""}
               `}
             ></div>
             <h2 className="text-2xl font-bold dark:text-white">{p.title}</h2>
@@ -79,8 +86,8 @@ const Projects = () => {
               className="flex items-center gap-2 mt-5 underline text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-300 transition-all"
               target="_blank"
             >
-              <FaGithub size={20} />
-              Github
+              <FaLink size={20}/>
+              Link
             </Link>
           </motion.div>
         ))}

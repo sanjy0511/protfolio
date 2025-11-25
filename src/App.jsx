@@ -5,6 +5,9 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Xoxo from "./components/Xoxo";
+import StonePaperGame from "./components/StoneGame";
+
+
 function App() {
   return (
     <>
@@ -23,6 +26,7 @@ function App() {
         />
 
         <Route path="/xoxo" element={<Xoxo />} />
+        <Route path="/stone-game" element={<StonePaperGame/>}/>
       </Routes>
     </>
   );
